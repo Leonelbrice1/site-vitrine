@@ -1,0 +1,72 @@
+{% include 'links.html' %}
+{% include 'styled.html' %}
+
+{% include 'header.html' %}
+
+<div class="block block-center">
+   <h3 class="mytitle">{{cible.titre}}</h3>
+    <div class="container">
+        <div class="article">
+            <img src="{{cible.image.url}}" class="card-img-top" alt="...">
+            <h5>{{cible.description}}</h5>
+            <p>
+               {{cible.content}}
+            </p>
+        </div>
+        <div style="width: 320px;">
+         <div class="commentaire">
+            <h4>Latest Posts</h4>
+               {% for article in articles %}
+               <div class="comment">
+                   <a href="{% url 'services:article' article.id %}" class="post" >
+                     <img src="{{article.image.url}}" class="card-img-top" alt="...">
+                     <span>By {{article.user.username }}</span>
+                     <address>Yaoundé 4</address>
+                     <h6>{{article.titre}}</h6>
+                   </a>
+                </div> 
+                {% endfor %}
+         </div>
+         <div class="categories">
+            <h4>Categories</h4>
+            <ul class="description-categories">
+                <li><a href="">Actualités de Yaoundé 4e</a><span>(1)</span></li>
+                <li><a href="">Communauté</a><span>(2)</span></li>
+                <li><a href="">Économique</a><span>(3)</span></li>
+                <li><a href="">Environment</a><span>(4)</span></li>
+            </ul>
+         </div>
+        </div>
+                     
+        </div>
+
+        <div class="leave-comment">
+            <div class="leave-comment-div">
+                <h5>Leave a comment</h5>
+                <div class="btn_all_bloc cell shrink" style="">
+                    <p class="btn_all">
+                        <a href="#">
+                            Tout voir
+                        </a>
+                    </p>
+                </div>
+            </div>
+            
+            <form class="form-comment">
+               <div class="form-input">
+                <input type="text" name="name" id="name" placeholder="Your name">
+                <input type="email" name="email" id="email" placeholder="Your email">
+               </div>
+                <textarea name="comment" id="comment"  placeholder="Write a Comment">
+                </textarea>
+                <button  class="btn-form">Souscrire</button>
+            </form>
+        </div>
+        {% include 'footer.html' %}
+    </div>
+
+  
+</div>
+
+
+{% include 'script.html' %}

@@ -1,0 +1,273 @@
+
+{% load static %}
+<!-- <div class="footer">
+
+    <div class="newletter">
+        
+        <div class="subscribe-box"> 
+            <a class="logo-footer" href="#"></a>
+            <p>Souscrire à la Newsletter</p>
+            <form action="" method="post" class="form-footer">
+                <input type="email" name="email" id="email" placeholder="Address" autocomplete="off">
+                <button  class="btn-footer">Souscrire</button>
+            </form>
+        </div>
+
+    </div>
+
+    <div class="section-links">
+        <section class="section section-contact">
+            
+            <ul>
+                <h5>
+                    Contact
+                </h5>
+                <address>
+                    Commune de Yaoundé IVe
+                    BP: 4783 Yaoundé / Cameroun 
+                </address>
+                <li>
+                    <a href="mailto:email@gmail.com">
+                        email@gmail.com 
+                    </a>
+                </li>
+                <li>
+                    <a href="tel:+237691919132">
+                        +237 691 91 91 32
+                    </a>
+                </li>
+            </ul>
+        </section>
+        
+        <section class="section section-network">
+                      
+            <ul>
+                <h5>Links</h5> 
+                <li><a href="">About</a></li>
+                <li><a href="">Our Team</a></li>
+                <li><a href="">Upcoming Events</a></li>
+                <li><a href="">Latest News</a></li>
+                <li><a href="">Contact</a></li>
+            </ul>
+        </section>
+
+        <section class="section section-departement">
+            <ul>
+               
+                
+              
+                
+                
+            
+                <h5>Departements</h5>
+                <li><a href="">Health & Safety</a></li>
+                <li><a href="">Housing & Land</a></li>
+                <li><a href="">Legal & Finance</a></li>
+                <li><a href="">Transport & Traffic</a></li>
+                <li><a href="">Arts & Culture</a></li>
+            </ul>
+
+        </section>
+
+
+        <section class="section section-explore">
+            
+            <ul>
+                <h5>Explore</h5>
+                <li><a href="">Administration</a></li>
+                <li><a href="">Fire Services</a></li>
+                <li><a href="">Business & Taxation</a></li>
+                <li><a href="">Circular’s And Go’s</a></li>
+            </ul>
+        </section>
+    </div>
+
+
+</div> -->
+<footer class="grid-container">
+
+    <div id="bloc_contact_info" class="grid-container">
+      <div id="info_footer" class="grid-x grid-padding-x">
+        <div class="cell large-3 large-offset-1 medium-12 small-12">
+          <img class="lazy"
+               src="{% static 'fileadmin/templates/master/assets/assets_common/img/default_img/newLogo.jpeg' %}"
+               data-src="{% static 'fileadmin/templates/master/assets/assets_common/img/default_img/newLogo.jpeg' %}"
+               width="238" height="72" alt="LOGO" />
+
+          <div class="cell shrink reseaux_sociaux">
+
+            <ul class="grid-x align-middle">
+              <li class="cell shrink reseau_facebook">
+                <a href="#" title="Suivez-nous sur Facebook (nouvelle fenêtre)" target="_blank" rel="noreferrer">
+                    <span class="show-for-sr">
+                      Suivez-nous sur Facebook
+                    </span>
+                </a>
+              </li>
+
+              <li class="cell shrink reseau_twitter">
+                <a href="#" title="Suivez-nous sur Twitter (nouvelle fenêtre)" target="_blank" rel="noreferrer">
+                    <span class="show-for-sr">
+                      Suivez-nous sur Twitter
+                    </span>
+                </a>
+              </li>
+
+              <li class="cell shrink reseau_instagram">
+                <a href="#" title="Suivez-nous sur Instagram (nouvelle fenêtre)" target="_blank" rel="noreferrer">
+                    <span class="show-for-sr">
+                      Suivez-nous sur Instagram
+                    </span>
+                </a>
+              </li>
+
+              <li class="cell shrink reseau_tiktok">
+                <a href="#" title="Suivez-nous sur TikTok (nouvelle fenêtre)" target="_blank" rel="noreferrer">
+                    <span class="show-for-sr">
+                      Suivez-nous sur TikTok
+                    </span>
+                </a>
+              </li>
+
+              <li class="cell shrink reseau_linkedin">
+                <a href="#" title="Suivez-nous sur LinkedIn (nouvelle fenêtre)" target="_blank" rel="noreferrer">
+                    <span class="show-for-sr">
+                      Suivez-nous sur LinkedIn
+                    </span>
+                </a>
+              </li>
+
+              <li class="cell shrink reseau_youtube">
+                <a href="#" title="Suivez-nous sur Youtube (nouvelle fenêtre)" target="_blank" rel="noreferrer">
+                    <span class="show-for-sr">
+                      Suivez-nous sur Youtube
+                    </span>
+                </a>
+              </li>
+            </ul>
+
+          </div>
+        </div>
+
+        <div class="cell large-4 medium-6 small-12">
+          <p class="titre_footer" style="font-size:40px; color:#3da647;">Contact</p>
+          <p>Boite postale </p>
+          <p>Adresse</p>
+
+          <p class="tel">
+            <a href="tel:99999999" style="color:#3c763d;"> 99 99 99 99 99</a>
+          </p>
+
+          <p class="mail">
+            <a href="#" title="Contacter nous par mail (nouvelle fenêtre)" target="_blank" rel="noreferrer"
+               style="color:#3c763d;">
+              Contacter nous
+            </a>
+          </p>
+
+        </div>
+
+        <div class="cell large-4 medium-6 small-12 map">
+          <p class="titre_footer" style="font-size:40px; color:#3da647;">Localisation </p>
+
+          <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15923.40953986857!2d11.5412476!3d3.8418485!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x108bc5c7d6082079%3A0x6603be3fb50f4825!2sMairie%20de%20Yaound%C3%A9%20IV%20-%20Ekounou!5e0!3m2!1sen!2scm!4v1707741587204!5m2!1sen!2scm"
+                  width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+    <div id="galaxie_partenaires" class="grid-container">
+      <div class="grid-x grid-padding-x align-center">
+        <div class="cell large-10 medium-12 small-12">
+        <p class="titre_footer" style="color: #3da647;">Nos Partenaires</p>
+        </div>
+        <div class="container">
+          <div class="row">
+          <div class="col">
+            <a href="#" title="Les bibliothèques (nouvelle fenêtre)" target="_blank" rel="noreferrer">
+              <img class="lazy"
+                   src="{% static 'fileadmin/templates/master/assets/assets_common/img/default_img/minpostel.jpg' %}"
+                   data-src="" width="100" height="auto" alt="Partenaire 1" />
+            </a>
+          </div>
+
+          <div class="col">
+            <a href="#" title="Site de l'Eau du Grand reims (nouvelle fenêtre)" target="_blank" rel="noreferrer">
+              <img class="lazy"
+                   src="{% static 'fileadmin/templates/master/assets/assets_common/img/default_img/minsante.png' %}"
+                   data-src="" width="100" height="auto" alt="Partenaire 2" />
+
+            </a>
+          </div>
+
+          <div class="col">
+            <a href="#" title="École supérieure d'art et de design de reims (nouvelle fenêtre)" target="_blank"
+               rel="noreferrer">
+              <img class="lazy"
+                   src="{% static 'fileadmin/templates/master/assets/assets_common/img/default_img/minrex.jpeg' %}"
+                   data-src="" width="100" height="auto" alt="Partenaire 3" />
+            </a>
+          </div>
+
+          <div class="col">
+            <a href="#" title="Grand reims (nouvelle fenêtre)" target="_blank">
+              <img class="lazy"
+                   src="{% static 'fileadmin/templates/master/assets/assets_common/img/default_img/minfi.png' %}"
+                   data-src="" width="100" height="auto" alt="Partenaire 4" />
+            </a>
+          </div>
+
+          <div class="col">
+            <a href="#" title="reims Légend'r (nouvelle fenêtre)" target="_blank">
+              <img class="lazy"
+                   src="{% static 'fileadmin/templates/master/assets/assets_common/img/default_img/mindef.jpeg' %}"
+                   data-src="" width="100" height="auto" alt="Partenaire 5" />
+            </a>
+          </div>
+
+        </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div id="menu_footer" class="grid-container grid-x grid-padding-x align-center">
+      <ul class="cell xxlarge-10 xlarge-11 large-12 medium-12 small-12">
+        <li>
+          <a href="#" style="color:black;">Mentions légales</a>
+        </li>
+
+        <li>
+          <a href="#" style="color:black;">Politique de
+            confidentialité</a>
+        </li>
+
+        <li>
+          <a href="#" style="color:black;">Accessibilité</a>
+        </li>
+
+        <li>
+          <a href="#" style="color:black;">Plan du site</a>
+        </li>
+
+        <li>
+          <a href="#" style="color:black;">Marchés
+            publics</a>
+        </li>
+
+        <li>
+          <a href="#" style="color:black;">Espace Presse</a>
+        </li>
+
+        <li>
+          <a href="#" target="_blank" rel="noreferrer" style="color:black;"> Contact</a>
+        </li>
+      </ul>
+    </div>
+  </footer>

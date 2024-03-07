@@ -34,7 +34,7 @@ ALLOWED_HOSTS = ['*']
 
 
 # Application definition
-
+SITE_ID=1
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -42,8 +42,16 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-
-    'services.apps.ServicesConfig'
+    'django.contrib.sites',
+    'services.apps.ServicesConfig',
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
+    'allauth.socialaccount.providers.google',
+    'allauth.socialaccount.providers.facebook',
+    'allauth.socialaccount.providers.instagram',
+    'allauth.socialaccount.providers.twitter',
+    
 ]
 
 MIDDLEWARE = [
@@ -55,7 +63,24 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+     "allauth.account.middleware.AccountMiddleware",
 ]
+
+# Provider specific settings
+SOCIALACCOUNT_PROVIDERS = {
+    'google': {
+        "SCOPE":["profile","email"],
+        "AUTH_PARAMS":{"access_type":"online"},
+        # For each OAuth based provider, either add a ``SocialApp``
+        # (``socialaccount`` app) containing the required client
+        # credentials, or list them here:
+        'APP': {
+            'client_id': '752141740268-1bggnj0n8t3179ogifvhai0prf0onrrj.apps.googleusercontent.com',
+            'secret': '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',
+
+        }
+    }
+}
 
 ROOT_URLCONF = 'Landing.urls'
 
@@ -70,10 +95,18 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                # `allauth` needs this from django
+                'django.template.context_processors.request',
             ],
         },
     },
 ]
+
+AUTHENTICATION_BACKENDS = [
+    'django.contrib.auth.backends.ModelBackend',
+    'allauth.account.auth_backends.AuthenticationBackend',
+]
+
 
 WSGI_APPLICATION = 'Landing.wsgi.application'
 
@@ -122,6 +155,19 @@ USE_L10N = True
 USE_TZ = True
 
 
+SOCIALACCOUNT_PROVIDERS = {
+    'google': {
+        'SCOPE': [
+            'profile',
+            'email',
+        ],
+        'AUTH_PARAMS': {
+            'access_type': 'online',
+        },
+        #'OAUTH_PKCE_ENABLED': True,
+    }
+}
+
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
@@ -145,3 +191,11 @@ MEDIA_URL = '/media/'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+EMAIL_BACKEND = 'django.core.mail.console.EmailBackend'
+LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '/' 
+#...ACCOUNT_LOGOUT_REDIRECT_URL='login'
+ACCOUNT_EMAIL_REQUIRED = True
+SOCIALACCOUNT_QUERY_EMAIL = True
+ACCOUNT_SESSION_REMEMBER = True
