@@ -20,6 +20,8 @@
         font-family: "Protest Riot", sans-serif;
         
     }
+    
+    
     .bloc_info h5{
         
         font-size: 20px;
@@ -86,6 +88,7 @@
                                         <div class="carousel-item" data-bs-interval="{{forloop.counter}}0000">
                                             <a href="{% url 'services:article' id=article.id %}">
                                                 <img src="{{ article.image.url }}" class="d-block w-100" alt="...">
+                                            </a>
                                           <div class="bloc_info">
                                             <h5> {{article.titre}} </h5>
                                             <p>
@@ -129,7 +132,7 @@
                                       <div class="clearfix">
                                           <img src="{% static 'fileadmin/templates/master/assets/assets_common/img/default_img/le maire2.jpeg' %}" class="col-md-6 float-md-end ms-md-3" alt="...">
 
-                                          <p class="">
+                                          <p ="discours">
                                                 Chers internautes, <br>
                                                 C’est avec un immense plaisir que nous vous accueillons sur la toute première plateforme numérique de la
                                               commune de Yaoundé IV, un site Internet qui, nous l’espérons, saura répondre aux nombreuses et pressantes
